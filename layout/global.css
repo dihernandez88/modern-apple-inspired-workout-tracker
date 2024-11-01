@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0A84FF; /* iOS Blue */
+  --secondary: #5E5CE6; /* iOS Purple */
+  --success: #30D158; /* iOS Green */
+  --danger: #FF453A; /* iOS Red */
+  --warning: #FFD60A; /* iOS Yellow */
+  --background-primary: #F5F5F7;
+  --card-background: #FFFFFF;
+  --text-primary: #1D1D1F;
+  --text-secondary: #86868B;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F5F5F7] text-[#1D1D1F] font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    @apply text-2xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-xl font-semibold;
+  }
+
+  h3 {
+    @apply text-lg font-medium;
+  }
+}
+
+@layer components {
+  .ios-header {
+    @apply bg-white px-4 pt-2 pb-3 sticky top-0 shadow-sm z-50;
+  }
+
+  .ios-card {
+    @apply bg-white rounded-xl shadow-sm overflow-hidden mb-3;
+  }
+
+  .ios-button {
+    @apply bg-[#0A84FF] text-white font-semibold py-3 px-6 rounded-full
+           hover:bg-[#0071E3] active:bg-[#0058B6] transition-colors;
+  }
+
+  .ios-button-secondary {
+    @apply bg-gray-100 text-gray-900 font-medium py-2 px-4 rounded-lg
+           hover:bg-gray-200 active:bg-gray-300 transition-colors;
+  }
+
+  .ios-input {
+    @apply bg-gray-100 rounded-lg px-4 py-2 w-full outline-none
+           focus:ring-2 focus:ring-[#0A84FF] focus:bg-white transition-all;
+  }
+}
